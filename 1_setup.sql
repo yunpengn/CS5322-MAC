@@ -1,3 +1,8 @@
+-- Drops all resources.
+BEGIN
+    SA_SYSDBA.DROP_POLICY('edu_ols');
+END;
+
 -- Create a policy container.
 BEGIN
     SA_SYSDBA.CREATE_POLICY(
