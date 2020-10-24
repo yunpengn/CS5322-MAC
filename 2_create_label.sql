@@ -33,8 +33,11 @@ BEGIN
 END;
 
 CREATE OR REPLACE FUNCTION label_grades(module_id NUMBER) RETURN LBACSYS.LBAC_LABEL AS
-    label_val VARCHAR(80);
+    label_val   VARCHAR(80);
+    module_code VARCHAR(5);
 BEGIN
+    SELECT code INTO module_code FROM modules WHERE id = module_id;
+
     label_val := 's';
     RETURN TO_LBAC_DATA_LABEL('edu_ols', label_val);
 END;

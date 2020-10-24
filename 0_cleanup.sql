@@ -6,3 +6,9 @@ SELECT VALUE FROM V$OPTION WHERE PARAMETER = 'Oracle Label Security';
 
 -- Unlocks OLS default administer.
 ALTER USER LBACSYS ACCOUNT UNLOCK IDENTIFIED BY "ols_admin";
+
+-- Grants unlimited table space.
+ALTER USER LBACSYS QUOTA UNLIMITED ON USERS;
+
+-- Grants necessary privileges.
+GRANT ALL PRIVILEGES TO LBACSYS;
