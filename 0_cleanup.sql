@@ -22,4 +22,7 @@ DROP USER edu_admin CASCADE;
 -- Creates system user.
 CREATE USER edu_admin IDENTIFIED BY edu_admin;
 GRANT ALL PRIVILEGES TO edu_admin;
+GRANT LBAC_DBA TO edu_admin;
+GRANT EXECUTE ON sa_sysdba TO edu_admin;
+GRANT EXECUTE ON to_lbac_data_label TO edu_admin;
 ALTER USER edu_admin QUOTA UNLIMITED ON USERS;
