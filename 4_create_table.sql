@@ -8,7 +8,7 @@ CREATE TABLE users (
   CHECK       (gender IN ('male', 'female'))
 );
 
-CREATE TABLE address (
+CREATE TABLE addresses (
   sid     VARCHAR(8)   NOT NULL,
   type    VARCHAR(10)  NOT NULL,
   address VARCHAR(100) NOT NULL,
