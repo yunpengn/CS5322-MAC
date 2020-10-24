@@ -1,4 +1,11 @@
--- Create all labels required.
+-- Drops all functions.
+DROP FUNCTION label_users;
+DROP FUNCTION label_addresses;
+DROP FUNCTION label_fees;
+DROP FUNCTION label_modules;
+DROP FUNCTION label_grades;
+
+-- Create functions to dynamically assign labels.
 CREATE OR REPLACE FUNCTION label_users RETURN LBACSYS.LBAC_LABEL AS
     label_val VARCHAR(80);
 BEGIN
