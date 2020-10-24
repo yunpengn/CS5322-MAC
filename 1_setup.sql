@@ -112,3 +112,9 @@ BEGIN
         long_name   => 'EC999',
         parent_name => 'ec');
 END;
+
+-- Reads all created components.
+SELECT * FROM ALL_SA_POLICIES;
+SELECT * FROM ALL_SA_LEVELS;
+SELECT * FROM ALL_SA_COMPARTMENTS;
+SELECT * FROM ALL_SA_GROUPS;
