@@ -32,6 +32,13 @@ BEGIN
     RETURN TO_LBAC_DATA_LABEL('edu_ols', label_val);
 END;
 
+CREATE OR REPLACE FUNCTION label_modules_write RETURN LBACSYS.LBAC_LABEL AS
+    label_val VARCHAR(80);
+BEGIN
+    label_val := 'u:adm,acd';
+    RETURN TO_LBAC_DATA_LABEL('edu_ols', label_val);
+END;
+
 CREATE OR REPLACE FUNCTION label_grades(module_id NUMBER) RETURN LBACSYS.LBAC_LABEL AS
     label_val   VARCHAR(80);
     module_code VARCHAR(5);

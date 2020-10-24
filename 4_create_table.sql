@@ -83,8 +83,15 @@ BEGIN
         policy_name    => 'edu_ols',
         schema_name    => 'lbacsys',
         table_name     => 'modules',
-        table_options  => 'all_control',
+        table_options  => 'read_control',
         label_function => 'label_modules()');
+
+    SA_POLICY_ADMIN.APPLY_TABLE_POLICY(
+        policy_name    => 'edu_ols',
+        schema_name    => 'lbacsys',
+        table_name     => 'modules',
+        table_options  => 'write_control',
+        label_function => 'label_modules_write()');
 
     SA_POLICY_ADMIN.APPLY_TABLE_POLICY(
         policy_name    => 'edu_ols',
