@@ -1,3 +1,10 @@
+-- Drops all tables.
+DROP TABLE addresses;
+DROP TABLE fees;
+DROP TABLE grades;
+DROP TABLE modules;
+DROP TABLE users;
+
 -- Creates all tables.
 CREATE TABLE users (
   sid         VARCHAR(8),
