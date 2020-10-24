@@ -1,5 +1,23 @@
 -- Drops all resources.
 BEGIN
+    SA_COMPONENTS.DROP_LEVEL('edu_ols', 30);
+    SA_COMPONENTS.DROP_LEVEL('edu_ols', 20);
+    SA_COMPONENTS.DROP_LEVEL('edu_ols', 10);
+
+    SA_COMPONENTS.DROP_COMPARTMENT('edu_ols', '003');
+    SA_COMPONENTS.DROP_COMPARTMENT('edu_ols', '002');
+    SA_COMPONENTS.DROP_COMPARTMENT('edu_ols', '001');
+
+    SA_COMPONENTS.DROP_GROUP('edu_ols', '1110');
+    SA_COMPONENTS.DROP_GROUP('edu_ols', '1120');
+    SA_COMPONENTS.DROP_GROUP('edu_ols', '1210');
+    SA_COMPONENTS.DROP_GROUP('edu_ols', '1220');
+    SA_COMPONENTS.DROP_GROUP('edu_ols', '1310');
+    SA_COMPONENTS.DROP_GROUP('edu_ols', '1100');
+    SA_COMPONENTS.DROP_GROUP('edu_ols', '1200');
+    SA_COMPONENTS.DROP_GROUP('edu_ols', '1300');
+    SA_COMPONENTS.DROP_GROUP('edu_ols', '1000');
+
     SA_SYSDBA.DROP_POLICY('edu_ols');
 END;
 
