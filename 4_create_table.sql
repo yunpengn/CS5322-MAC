@@ -107,3 +107,6 @@ BEGIN
         table_options  => 'all_control',
         label_function => 'edu_admin.label_grades(:new.module_id)');
 END;
+
+-- Lists all applied policies.
+SELECT * FROM ALL_SA_TABLE_POLICIES;
