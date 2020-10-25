@@ -63,6 +63,34 @@ CREATE TABLE grades (
   CHECK        (letter_grade IN ('A', 'B', 'C', 'D', 'F'))
 );
 
+-- Drops existing OLS policies.
+BEGIN
+    SA_POLICY_ADMIN.REMOVE_TABLE_POLICY(
+        policy_name    => 'edu_ols',
+        schema_name    => 'edu_admin',
+        table_name     => 'users');
+
+    SA_POLICY_ADMIN.REMOVE_TABLE_POLICY(
+        policy_name    => 'edu_ols',
+        schema_name    => 'edu_admin',
+        table_name     => 'addresses');
+
+    SA_POLICY_ADMIN.REMOVE_TABLE_POLICY(
+        policy_name    => 'edu_ols',
+        schema_name    => 'edu_admin',
+        table_name     => 'fees');
+
+    SA_POLICY_ADMIN.REMOVE_TABLE_POLICY(
+        policy_name    => 'edu_ols',
+        schema_name    => 'edu_admin',
+        table_name     => 'modules');
+
+    SA_POLICY_ADMIN.REMOVE_TABLE_POLICY(
+        policy_name    => 'edu_ols',
+        schema_name    => 'edu_admin',
+        table_name     => 'grades');
+END;
+
 -- Assigns OLS policies.
 BEGIN
     SA_POLICY_ADMIN.APPLY_TABLE_POLICY(
