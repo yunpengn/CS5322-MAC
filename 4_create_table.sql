@@ -70,40 +70,40 @@ BEGIN
         schema_name    => 'edu_admin',
         table_name     => 'users',
         table_options  => 'all_control',
-        label_function => 'label_users()');
+        label_function => 'edu_admin.label_users()');
 
     SA_POLICY_ADMIN.APPLY_TABLE_POLICY(
         policy_name    => 'edu_ols',
         schema_name    => 'edu_admin',
         table_name     => 'addresses',
         table_options  => 'all_control',
-        label_function => 'label_addresses(:new.type)');
+        label_function => 'edu_admin.label_addresses(:new.type)');
 
     SA_POLICY_ADMIN.APPLY_TABLE_POLICY(
         policy_name    => 'edu_ols',
         schema_name    => 'edu_admin',
         table_name     => 'fees',
         table_options  => 'all_control',
-        label_function => 'label_fees()');
+        label_function => 'edu_admin.label_fees()');
 
     SA_POLICY_ADMIN.APPLY_TABLE_POLICY(
         policy_name    => 'edu_ols',
         schema_name    => 'edu_admin',
         table_name     => 'modules',
         table_options  => 'read_control',
-        label_function => 'label_modules()');
+        label_function => 'edu_admin.label_modules()');
 
     SA_POLICY_ADMIN.APPLY_TABLE_POLICY(
         policy_name    => 'edu_ols',
         schema_name    => 'edu_admin',
         table_name     => 'modules',
         table_options  => 'write_control',
-        label_function => 'label_modules_write()');
+        label_function => 'edu_admin.label_modules_write()');
 
     SA_POLICY_ADMIN.APPLY_TABLE_POLICY(
         policy_name    => 'edu_ols',
         schema_name    => 'edu_admin',
         table_name     => 'grades',
         table_options  => 'all_control',
-        label_function => 'label_grades(:new.module_id)');
+        label_function => 'edu_admin.label_grades(:new.module_id)');
 END;
