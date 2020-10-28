@@ -44,7 +44,7 @@ CREATE OR REPLACE FUNCTION label_grades(module_id NUMBER) RETURN LBACSYS.LBAC_LA
     module_code VARCHAR(5);
 BEGIN
     -- First, determine the level and compartment.
-    label_val := 's:acd:';
+    label_val := 'c:acd:';
 
     -- Then, determine group based on module code.
     SELECT code INTO module_code FROM modules WHERE id = module_id;
