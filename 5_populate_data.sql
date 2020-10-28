@@ -172,3 +172,26 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON ADDRESSES TO hugh, damith, chris, david,
 GRANT SELECT, INSERT, UPDATE, DELETE ON FEES      TO hugh, damith, chris, david, steve, reza;
 GRANT SELECT, INSERT, UPDATE, DELETE ON MODULES   TO hugh, damith, chris, david, steve, reza;
 GRANT SELECT, INSERT, UPDATE, DELETE ON GRADES    TO hugh, damith, chris, david, steve, reza;
+
+BEGIN
+    SA_USER_ADMIN.SET_LEVELS('edu_ols', 'hugh', 'c', 'u');
+    SA_USER_ADMIN.SET_LEVELS('edu_ols', 'damith', 'c', 'u');
+    SA_USER_ADMIN.SET_LEVELS('edu_ols', 'chris', 'c', 'u');
+    SA_USER_ADMIN.SET_LEVELS('edu_ols', 'david', 'c', 'u');
+    SA_USER_ADMIN.SET_LEVELS('edu_ols', 'steve', 's', 'c');
+    SA_USER_ADMIN.SET_LEVELS('edu_ols', 'reza', 'c', 'c');
+
+    SA_USER_ADMIN.ADD_COMPARTMENTS('edu_ols', 'hugh', 'acd', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_COMPARTMENTS('edu_ols', 'damith', 'acd', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_COMPARTMENTS('edu_ols', 'chris', 'acd', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_COMPARTMENTS('edu_ols', 'david', 'acd', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_COMPARTMENTS('edu_ols', 'steve', 'adm', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_COMPARTMENTS('edu_ols', 'reza', 'fin', SA_UTL.READ_WRITE);
+
+    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'hugh', 'nus, cs, cs206', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'damith', 'nus, cs, cs404', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'chris', 'nus, ma, ma314, ma500', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'david', 'nus, ec, ec999', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'steve', 'nus', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'reza', 'nus', SA_UTL.READ_WRITE);
+END;
