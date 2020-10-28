@@ -47,7 +47,7 @@ BEGIN
     label_val := 'c:acd:';
 
     -- Then, determine group based on module code.
-    SELECT code INTO module_code FROM modules WHERE id = module_id;
+    SELECT code INTO module_code FROM edu_admin.modules WHERE id = module_id;
     label_val := label_val || module_code;
 
     RETURN TO_LBAC_DATA_LABEL('edu_ols', label_val);
