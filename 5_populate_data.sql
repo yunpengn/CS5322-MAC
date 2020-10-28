@@ -188,10 +188,10 @@ BEGIN
     SA_USER_ADMIN.ADD_COMPARTMENTS('edu_ols', 'steve', 'adm', SA_UTL.READ_WRITE);
     SA_USER_ADMIN.ADD_COMPARTMENTS('edu_ols', 'reza', 'fin', SA_UTL.READ_WRITE);
 
-    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'hugh', 'nus, cs, cs206', SA_UTL.READ_WRITE);
-    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'damith', 'nus, cs, cs404', SA_UTL.READ_WRITE);
-    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'chris', 'nus, ma, ma314, ma500', SA_UTL.READ_WRITE);
-    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'david', 'nus, ec, ec999', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'hugh', 'nus,cs,cs206', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'damith', 'nus,cs,cs404', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'chris', 'nus,ma,ma314,ma500', SA_UTL.READ_WRITE);
+    SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'david', 'nus,ec,ec999', SA_UTL.READ_WRITE);
     SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'steve', 'nus', SA_UTL.READ_WRITE);
     SA_USER_ADMIN.ADD_GROUPS('edu_ols', 'reza', 'nus', SA_UTL.READ_WRITE);
 END;
